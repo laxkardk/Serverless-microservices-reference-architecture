@@ -1,5 +1,5 @@
 param sqlServerName string
-param sqlDatabaeName string
+param sqlDatabaseName string
 param location string
 param administratorLogin string
 @secure()
@@ -20,7 +20,7 @@ resource sqlServer 'Microsoft.Sql/servers@2021-05-01-preview' = {
 
 resource servers_rideshare_server_name_databases_Rideshare_name 'Microsoft.Sql/servers/databases@2021-05-01-preview' = {
   parent: sqlServer
-  name: sqlDatabaeName
+  name: sqlDatabaseName
   location: location
   tags: resourceTags
   sku: {
