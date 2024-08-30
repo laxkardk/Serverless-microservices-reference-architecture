@@ -21,13 +21,13 @@
 name: Build and deploy Trip Archiver Function App
 
 on:
-  workflow_dispatch:    
   push:
     branches: 
       - '*'
     paths: [ 'nodejs/**' ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
 
 env:
   AZURE_FUNCTIONAPP_NAME: TripShareTripArchiverFunctionApp   # set this to your function app name on Azure
