@@ -24,14 +24,14 @@ on:
   push:
     branches: 
       - '*'
-    paths: [ 'nodejs/**' ]
+    paths: [ 'nodejs/**','workflows/azure-functions-app-nodejs.yml' ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
 
 env:
   AZURE_FUNCTIONAPP_NAME: TripShareTripArchiverFunctionApp   # set this to your function app name on Azure
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: .\nodejs\serverless-microservices-functionapp-triparchiver\published       # set this to the path to your function app project, defaults to the repository root
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: .\nodejs\serverless-microservices-functionapp-triparchiver       # set this to the path to your function app project, defaults to the repository root
   NODE_VERSION: '20.x'                      # set this to the node version to use (e.g. '8.x', '10.x', '12.x')
 
 jobs:
