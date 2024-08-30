@@ -1,14 +1,14 @@
-name: Build and deploy Trips Function App
+name: Build and deploy Orchestrators Function App
 on:
   push:
     branches:
     - main
 env:
-  AZURE_FUNCTIONAPP_NAME: TripShareTripsFunctionApp
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: .\dotnet\ServerlessMicroservices.FunctionApp.Trips\published
+  AZURE_FUNCTIONAPP_NAME: TripShareOrchestratorsFunctionApp
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: .\dotnet\ServerlessMicroservices.FunctionApp.Orchestrators\published
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 6.0.x
-  WORKING_DIRECTORY: .\dotnet\ServerlessMicroservices.FunctionApp.Trips
+  WORKING_DIRECTORY: .\dotnet\ServerlessMicroservices.FunctionApp.Orchestrators
 jobs:
   build:
     runs-on: windows-latest
@@ -42,5 +42,5 @@ jobs:
       uses: Azure/functions-action@v1
       with:
         app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
-        publish-profile: ${{ secrets.TripShareTripsFunctionApp_2995 }}
+        publish-profile: ${{ secrets.TripShareOrchestratorsFunctionApp_52B5 }}
         package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}

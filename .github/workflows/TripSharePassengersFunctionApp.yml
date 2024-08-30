@@ -1,14 +1,14 @@
-name: Build and deploy Trips Function App
+name: Build and deploy Passengers Function App
 on:
   push:
     branches:
     - main
 env:
-  AZURE_FUNCTIONAPP_NAME: TripShareTripsFunctionApp
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: .\dotnet\ServerlessMicroservices.FunctionApp.Trips\published
+  AZURE_FUNCTIONAPP_NAME: TripSharePassengersFunctionApp
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: .\dotnet\ServerlessMicroservices.FunctionApp.Passengers\published
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 6.0.x
-  WORKING_DIRECTORY: .\dotnet\ServerlessMicroservices.FunctionApp.Trips
+  WORKING_DIRECTORY: .\dotnet\ServerlessMicroservices.FunctionApp.Passengers
 jobs:
   build:
     runs-on: windows-latest
@@ -42,5 +42,5 @@ jobs:
       uses: Azure/functions-action@v1
       with:
         app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
-        publish-profile: ${{ secrets.TripShareTripsFunctionApp_2995 }}
+        publish-profile: ${{ secrets.TripSharePassengersFunctionApp_8CBB }}
         package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}

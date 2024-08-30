@@ -1,4 +1,4 @@
-name: Build and deploy TripShareDriver Function App
+name: Build and deploy Driver Function App
 on:
   push:
     branches:
