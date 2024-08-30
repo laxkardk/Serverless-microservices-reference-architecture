@@ -1,14 +1,14 @@
-name: Build and deploy TripShareDriver Function App
+name: Build and deploy .NET Core application to Function App TripShareTripsFunctionApp
 on:
   push:
     branches:
     - main
 env:
-  AZURE_FUNCTIONAPP_NAME: TripShareDriverFunctionApp
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: ServerlessMicroservices.FunctionApp.Drivers\published
+  AZURE_FUNCTIONAPP_NAME: TripShareTripsFunctionApp
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: ServerlessMicroservices.FunctionApp.Trips\published
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 6.0.x
-  WORKING_DIRECTORY: ServerlessMicroservices.FunctionApp.Drivers
+  WORKING_DIRECTORY: ServerlessMicroservices.FunctionApp.Trips
 jobs:
   build:
     runs-on: windows-latest
@@ -42,5 +42,5 @@ jobs:
       uses: Azure/functions-action@v1
       with:
         app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
-        publish-profile: ${{ secrets.TripShareDriverFunctionApp_29FD }}
+        publish-profile: ${{ secrets.TripShareTripsFunctionApp_2995 }}
         package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
