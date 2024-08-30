@@ -1,8 +1,11 @@
 name: Build and deploy Passengers Function App
 on:
   push:
-    branches:
-    - main
+    branches: 
+      - '*'
+    paths: [ 'dotnet/ServerlessMicroservices.FunctionApp.Passengers/**' ]
+  pull_request:
+    branches: [ main ]
 env:
   AZURE_FUNCTIONAPP_NAME: TripSharePassengersFunctionApp
   AZURE_FUNCTIONAPP_PACKAGE_PATH: .\dotnet\ServerlessMicroservices.FunctionApp.Passengers\published

@@ -1,8 +1,11 @@
 name: Build and deploy Driver Function App
 on:
   push:
-    branches:
-    - main
+    branches: 
+      - '*'
+    paths: [ 'dotnet/ServerlessMicroservices.FunctionApp.Drivers/**' ]
+  pull_request:
+    branches: [ main ]
 env:
   AZURE_FUNCTIONAPP_NAME: TripShareDriverFunctionApp
   AZURE_FUNCTIONAPP_PACKAGE_PATH: .\dotnet\ServerlessMicroservices.FunctionApp.Drivers\published

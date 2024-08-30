@@ -1,8 +1,11 @@
 name: Build and deploy Orchestrators Function App
 on:
   push:
-    branches:
-    - main
+    branches: 
+      - '*'
+    paths: [ 'dotnet/ServerlessMicroservices.FunctionApp.Orchestrators/**' ]
+  pull_request:
+    branches: [ main ]
 env:
   AZURE_FUNCTIONAPP_NAME: TripShareOrchestratorsFunctionApp
   AZURE_FUNCTIONAPP_PACKAGE_PATH: .\dotnet\ServerlessMicroservices.FunctionApp.Orchestrators\published
