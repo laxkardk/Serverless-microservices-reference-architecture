@@ -5,10 +5,10 @@ on:
     - main
 env:
   AZURE_FUNCTIONAPP_NAME: TripShareDriverFunctionApp
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: ServerlessMicroservices.FunctionApp.Drivers\published
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: .\dotnet\ServerlessMicroservices.FunctionApp.Drivers\published
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 6.0.x
-  WORKING_DIRECTORY: ServerlessMicroservices.FunctionApp.Drivers
+  WORKING_DIRECTORY: .\dotnet\ServerlessMicroservices.FunctionApp.Drivers
 jobs:
   build:
     runs-on: windows-latest
