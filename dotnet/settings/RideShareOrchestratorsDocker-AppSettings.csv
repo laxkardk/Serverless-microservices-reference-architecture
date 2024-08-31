@@ -1,11 +1,11 @@
-APPINSIGHTS_INSTRUMENTATIONKEY=
-FUNCTIONS_EXTENSION_VERSION=~2
+APPINSIGHTS_INSTRUMENTATIONKEY|658cb43e-de42-4890-9287-4f4b04f75356
+FUNCTIONS_EXTENSION_VERSION=~4
 AzureWebJobsDashboard=
 AzureWebJobsStorage=
 DocDbApiKey=
 DocDbEndpointUri=
-DocDbRideShareDatabaseName=RideShare
-DocDbRideShareMainCollectionName=Main
+DocDbTripShareDatabaseName=TripShare
+DocDbTripShareMainCollectionName=Main
 DocDbThroughput=400
 DriversAcknowledgeMaxWaitPeriodInSeconds=120
 DriversLocationRadiusInMiles=15
@@ -20,4 +20,3 @@ TripDemosQueue=trip-demos
 TripDriversQueue=trip-drivers
 TripExternalizationsEventGridTopicUrl=
 TripExternalizationsEventGridTopicApiKey=
-
